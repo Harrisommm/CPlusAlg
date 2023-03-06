@@ -1,11 +1,11 @@
 # CPlusAlg
 Repository for C++ Data structure &amp; Algorithm
 
-## Class note
+## Note
 
 Class note.txt
 
-## In-class Codes
+## Code
 
 in-class C++ practice assignments cpp files
 
@@ -13,5 +13,5 @@ in-class C++ practice assignments cpp files
 
 2023
 
-> Mar 3 : 
+> Mar 6 : 
 
