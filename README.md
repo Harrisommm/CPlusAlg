@@ -1,5 +1,5 @@
 # CPlusAlg
-Repository for C++ Data structure &amp; Algorithm
+Repository for C++ Data structure &amp; Algorithm Course
 
 ## Note
 
