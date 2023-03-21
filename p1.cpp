@@ -5,7 +5,6 @@
 int main()
 {
     std::string s;
-    std::string reverse;
     s = "Hey, You Here";
     
     for(int x=0; x<s.length(); x++)
@@ -20,16 +19,12 @@ int main()
             result += s[y];
         }
     }
-    reverse = "";
     int len = result.length();
-    std::cout << len;
-    reverse.resize(len);
-
     
     for (int i=0, j=len-1; i<len; i++, j--)
     {
-        reverse[i] = result[j];
+        result[i] = result[j];
     }
-    std::cout << reverse;
+    std::cout << result;
 
 };
