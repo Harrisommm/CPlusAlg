@@ -1,10 +1,22 @@
 This is a course note for C++ Algorithm, Data structure udemy course
 
-RECAP C++ BASIC
+TYPE OF DATA STRUCTURES
 
-POINTER
+Physical; how the memory should be organized
+1. Array; size is static, can be created in stack, heap
+2. Linked list; linked to next node, has variable length, created in heap
 
-OVERRIDE
+Logical; are implemented using physical data structure
 
-
+linear
+1. stack
+2. queues
+non-linear
+3. tress 
+4. graph
+tabular
+5. hash table
  
+ ABSTRACT DATATYPE (ADT)
+ 1. representation of data
+ 2. operation on data
