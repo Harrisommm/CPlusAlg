@@ -27,4 +27,4 @@ int main()
     }
     std::cout << result;
 
-};  
+}; 
