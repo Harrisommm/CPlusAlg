@@ -21,3 +21,18 @@ tabular
  1. representation of data
  2. operation on data
 
+RECURSION //function calling itself
+void fun1(int n)
+{
+    if(n>0)
+    {
+        fun1(n-1;)
+        print("%d",n); //the output is 1,2,3. Every function call rturns to its calling point
+        
+    }
+}
+void main()
+{
+    int x=3;
+    fun1(x); 
+}
