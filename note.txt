@@ -27,7 +27,8 @@ void fun1(int n)
     if(n>0)
     {
         fun1(n-1;)
-        print("%d",n); //the output is 1,2,3. Every function call rturns to its calling point
+        print("%d",n); //the output is 1,2,3. 
+                       //Every function call rturns to its calling point
         
     }
 }
@@ -36,3 +37,21 @@ void main()
     int x=3;
     fun1(x); 
 }
+
+TIME COMPLEXITY IN RECURSIVE FUNCTION
+print n units
+= O(n)
+
+void fun1(int n) //T(n)
+{
+    if(n>0) //1
+    {
+        print("%d",n); //1
+        fun1(n-1;) //T(n-1)
+    }
+}
+so T(n) = 1(n=0), T(n-1)+2(n>0)
+= T(n-k)+k
+
+assume n-k=0, n=k
+T(n) = 1 + n
