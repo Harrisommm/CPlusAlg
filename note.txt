@@ -55,3 +55,4 @@ so T(n) = 1(n=0), T(n-1)+2(n>0)
 
 assume n-k=0, n=k
 T(n) = 1 + n
+
