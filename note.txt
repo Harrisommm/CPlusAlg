@@ -58,6 +58,26 @@ T(n) = 1 + n
 
 TYPES OF RECURSION
 1. Tail Recursion
+void fun(int n)
+{
+    if(n>0)
+    {
+        -----
+        -----
+        fun(n-1); //finish things and call itself
+    }
+}
+void fun(int n)
+{
+    while(n>0) //loop tail recursion
+    {
+        cout(n);
+        n--
+    }
+}
+Comparison: Running time is same
+Space : O(n)
+        O(1) //loop takes less space, more efficient
 2. Head Recursion
 3. Tree Recursion
 4. Indirect Recursion
