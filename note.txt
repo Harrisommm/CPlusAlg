@@ -56,6 +56,7 @@ so T(n) = 1(n=0), T(n-1)+2(n>0)
 assume n-k=0, n=k
 T(n) = 1 + n
 
+
 TYPES OF RECURSION
 1. Tail Recursion
 void fun(int n)
@@ -100,6 +101,54 @@ void fun(int n) //loop version
         -----
     }
 }
-3. Tree Recursion
+3. Tree Recursion //calling itself more than 1 time
+fun(n) //calltime 2^(n+1) -1 = O(2^n), space = O(n)
+{
+    if(n>0)
+    {
+        ---
+        fun(n-1);
+        ---
+        fun(n-1);
+        ---
+    }
+}
+
+Linear Recursion
+fun(n)
+{
+    if(n>0)
+    {
+        ---
+        fun(n-1); //calling only 1 time
+        ---
+    }
+} 
+
 4. Indirect Recursion
+void funA(int n)
+{
+    if(n>0)
+    {
+        cout << n;
+        funB(n-1);
+    }
+}
+void funB(int n)
+{
+    if(n>1)
+    {
+        cout <<n;
+        funA(n/2);
+    }
+}
 5. Nested Recursion
+int fun(int n)
+{
+    if(n>100)
+    {
+        return n-10;
+    }
+    else
+    return fun(fun(n+11));
+}
