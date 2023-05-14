@@ -79,6 +79,27 @@ Comparison: Running time is same
 Space : O(n)
         O(1) //loop takes less space, more efficient
 2. Head Recursion
+void fun(int n)
+{
+    if(n>0)
+    {
+        fun(n-1); //call itself and execute following code
+        -----
+        -----
+    }
+}
+
+void fun(int n) //loop version
+{
+    int i = 1;
+    while(i<=n)
+    {
+        cout << i;
+        i++;
+        -----
+        -----
+    }
+}
 3. Tree Recursion
 4. Indirect Recursion
 5. Nested Recursion
