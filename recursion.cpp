@@ -46,9 +46,18 @@ int naturalSum(int y)
         return naturalSum(y-1)+y;
 }
 
+int Fac(int i)
+{
+    if(i==0)
+    {
+        return 1;
+    }
+    else
+        return Fac(i-1)*i;
+}
 int main()
 {
-    int r = naturalSum(5);
+    int r = Fac(5);
     std::cout << r;
     
     return 0;
