@@ -72,7 +72,7 @@
 // int F[10];
 // int fib(int n)
 // {
-    
+
 //     if(n<=1)
 //     {
 //         F[n] = n; //memoization
@@ -93,15 +93,32 @@
 //     }
 // }
 
+// int main()
+// {
+//     int i;
+//     for(i=0; i<10; i++)
+//     {
+//         F[i] = -1;
+//     }
+//     std::cout << fib(7);
+//     return 0;
+
+// };
+
+int nCr(int n, int r)
+{
+    if (n == r | r == 0)
+    {
+        return 1;
+    }
+    else
+    {
+        return nCr(n - 1, r - 1) + nCr(n - 1, r);
+    }
+}
+
 int main()
 {
-    int i;
-    for(i=0; i<10; i++)
-    {
-        F[i] = -1;
-    }
-    std::cout << fib(7);    
+    std::cout << nCr(4, 2);
     return 0;
-
-};  
-
+}
