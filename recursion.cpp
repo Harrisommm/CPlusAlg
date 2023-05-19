@@ -56,24 +56,35 @@
 //         return Fac(i-1)*i;
 // }
 
-double E(int x, int n)
+// double taylor(int x, int n)
+// {
+//     static double s;
+//     if(n==0)
+//     {
+//         return s;
+//     }
+//     else
+//     {
+//         s = 1.0 + x*s/n;
+//         return taylor(x,n-1);
+//     }
+// }
+int fib(int n)
 {
-    if(n==0)
+    static int s;
+    if(n<=1)
     {
-        return 1;
+        return n;
     }
     else
     {
-        
+        return (fib(n-2)+fib(n-1));
     }
 }
 
-
 int main()
 {
-    int r = Fac(5);
-    std::cout << r;
-    
+    std::cout << fib(7);    
     return 0;
 
 };  
