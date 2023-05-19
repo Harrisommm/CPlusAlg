@@ -152,3 +152,6 @@ int fun(int n)
     else
     return fun(fun(n+11));
 }
+
+MEMOIZATION
+= storing result of the function so it can be utilized again
