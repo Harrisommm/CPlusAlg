@@ -187,3 +187,20 @@ for(int i=0; i<5; i++)
 delete []p;
 p=q;
 q = NULL
+
+2D ARRAY
+1. int A[3][4] //in stack
+
+2. int *A[3] //in stack
+A[0] = new int[4]; //in heap
+A[1] = new int[4];
+A[2] = new int[4];
+A[1][2] =15;
+
+3. int **A; //double pointer in tack
+A = new int*[3] //in heap
+A[0] = new int[4]; //in heap
+A[1] = new int[4];
+A[2] = new int[4];
+A[1][2] =15;
+
