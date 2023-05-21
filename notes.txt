@@ -155,3 +155,35 @@ int fun(int n)
 
 MEMOIZATION
 = storing result of the function so it can be utilized again
+
+
+ARRAY
+scalar variable // int x =10;
+vector variable // int A[5];
+
+1. int A[5]; //garbage value
+2. int A[5]={1,2,3,4,5};
+3. int A[5][1,2];
+4. int A[5]={0};
+5. int A[]={1,2,3,4,5};
+
+STATIC vs DYNAMIC ARRAY
+to access to heap, need pointer
+void main()
+{
+    int A[5]; //static
+    A[0] = 5;
+    int *p;
+    p = new int [5] //array in heap, can be resized
+    p[0] = 5;
+    delete []p;
+}
+
+INCREASE ARRAY SIZE
+int *p = new int [5]
+int *q= new int [10]
+for(int i=0; i<5; i++)
+    q[i] = p[i];
+delete []p;
+p=q;
+q = NULL

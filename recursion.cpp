@@ -119,6 +119,6 @@ int nCr(int n, int r)
 
 int main()
 {
-    std::cout << nCr(4, 2);
+    std::cout << nCr(4, 2) << std::endl;    
     return 0;
 }
