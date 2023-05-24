@@ -204,3 +204,27 @@ A[1] = new int[4];
 A[2] = new int[4];
 A[1][2] =15;
 
+ARRAY MAPPING //example A[3][4]
+1. Row-major mapping 
+Add(A[1][2]) = 200basic address + [4second row + 2third column]*2byte
+2. Column-major mapping
+Add(A[1][2]) = 200basic address + [2thir column*3rows + 1row]*2byte
+
+4D ARRAY MAPPING//example A[d1][d2][d3][d4]
+Row-major mapping 
+addr(A[i1][i2][i3][i4]) = L0 + (i1*d2*d3*d4 + i2*d3*d4 + i3*d4 + i4) * w
+Column-major mapping
+addr(A[i1][i2][i3][i4]) = L0 + (i4*d1*d2*d3 + i3*d1*d2 + i2*d1 + i1) * w
+
+nD ARRAY MAPPING
+L0 + (n sigma p=1) ip * 
+
+ROW
+int A[l][m][n];
+addr(A[i][j][k]) = L0 +[i*m*n+j*n+k]*w
+
+COLUMN 
+int A[l][m][n];
+addr(A[i][j][k]) = L0 +[k*l*m+j*l+i]*w
+
+ARRAY ABSTRACT DATA TYPE
