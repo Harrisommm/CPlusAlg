@@ -227,4 +227,6 @@ COLUMN
 int A[l][m][n];
 addr(A[i][j][k]) = L0 +[k*l*m+j*l+i]*w
 
-ARRAY ABSTRACT DATA TYPE
+ARRAY ABSTRACT DATA TYPE    
+
+
