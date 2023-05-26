@@ -255,7 +255,20 @@ OPERATION
     A[index] = x;
     Length ++;
 4. Delete(index)
-5.
+    for(i=index; i>length-1; i++)
+    {
+        A[i] = A[i+1];
+    }
+    Length --;
+5. search(x)
+linear search
+    for(i=0; i<length; i++)
+    {
+        if(key==A[i])
+            return i;
+    }
+binary search
+
 6.
 7.
 8.
