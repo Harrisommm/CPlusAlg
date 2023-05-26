@@ -229,4 +229,11 @@ addr(A[i][j][k]) = L0 +[k*l*m+j*l+i]*w
 
 ARRAY ABSTRACT DATA TYPE    
 
+DATA
+1. Array space
+2. Size 
+3. Length(No of elements)
 
+1. int A[10]
+2. int *A;
+A= new int[size]
