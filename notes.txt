@@ -237,3 +237,27 @@ DATA
 1. int A[10]
 2. int *A;
 A= new int[size]
+
+OPERATION 
+1. Display()
+    for(i=0; i<length; i++)
+    {
+        cout(A[i]);
+    }
+2. Add(x)/Append(x)
+    A[Length] = x;
+    Length++;
+3. Insert(index, x) //index should be smaller than length, size
+    for(i=length; i>index; i--)
+    {
+        A[i] = A[i-1];
+    }
+    A[index] = x;
+    Length ++;
+4. Delete(index)
+5.
+6.
+7.
+8.
+9.
+10.
