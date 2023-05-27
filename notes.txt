@@ -267,8 +267,54 @@ linear search
         if(key==A[i])
             return i;
     }
-binary search
+improved linear search
+1.transposition
+    for(i=0; i<length; i++)
+    {
+        if(key==A[i])
+        {
+            swap(A[i],A[i-1]);
+            return i-1;
+        }
+    }
+2.move to front/head
+    for(i=0; i<length; i++)
+    {
+        if(key==A[i])
+        {
+            swap(A[i],A[0]);
+            return 0;
+        }
+    }
 
+binary search
+Algorithm BinSearch(l,h,key)
+{
+    while(l<=h)
+    {
+        mid = (l+h)/2;
+        if(key == mid)
+            return mid;
+        else if(key<A[mid])
+            h = mid-1;
+        else
+            l = mid +1;
+    }
+}
+
+Algorithm RBinSearch(l,h,key)
+{
+    while(l<=h)
+    {
+        mid = (l+h)/2;
+        if(key == mid)
+            return mid;
+        else if(key<A[mid])
+            return RBinSearch(l,mid-1,key);
+        else
+            return RBinSearch(mid+1,h,key);
+    }
+}
 6.
 7.
 8.
