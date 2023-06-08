@@ -317,47 +317,64 @@ Array* Array::Diff(Array arr2)
 }
 int main()
 {
-    Array *arr1;
-    int ch,sz;
-    int x,index;
+    // Array *arr1;
+    // int ch,sz;
+    // int x,index;
 
-    cout<<"Enter Size of Array";
-    scanf("%d",&sz);
-    arr1=new Array(sz);
+    // cout<<"Enter Size of Array";
+    // scanf("%d",&sz);
+    // arr1=new Array(sz);
 
-    do
+    // do
+    // {
+    //     cout<<"\n\nMenu\n";
+    //     cout<<"1. Insert\n";
+    //     cout<<"2. Delete\n";
+    //     cout<<"3. Search\n";
+    //     cout<<"4. Sum\n";
+    //     cout<<"5. Display\n";
+    //     cout<<"6. Exit\n";
+
+    //     cout<<"enter you choice ";
+    //     cin>>ch;
+
+    //     switch(ch)
+    //     {
+    //         case 1: cout<<"Enter an element and index ";
+    //             cin>>x>>index;
+    //             arr1->Insert(index,x);
+    //             break;
+    //         case 2: cout<<"Enter index ";
+    //             cin>>index;
+    //             x=arr1->Delete(index);
+    //             cout<<"Deleted Element is"<<x;
+    //             break;
+    //         case 3:cout<<"Enter element to search ";
+    //             cin>>x;
+    //             index=arr1->LinearSearch(x);
+    //             cout<<"Element index "<<index;
+    //             break;
+    //         case 4:cout<<"Sum is "<<arr1->Sum();
+    //             break;
+    //         case 5:arr1->Display();
+    //     }
+    // }while(ch<6);
+    // return 0;
+
+    int A[] = {6,7,8,9,11,12,15,16,17,18,19};
+    //         0,1,2,3,4
+    int dif = 6;
+    for (int i=0;i<11;i++)
     {
-        cout<<"\n\nMenu\n";
-        cout<<"1. Insert\n";
-        cout<<"2. Delete\n";
-        cout<<"3. Search\n";
-        cout<<"4. Sum\n";
-        cout<<"5. Display\n";
-        cout<<"6. Exit\n";
-
-        cout<<"enter you choice ";
-        cin>>ch;
-
-        switch(ch)
+        if(A[i]-i != dif)
         {
-            case 1: cout<<"Enter an element and index ";
-                cin>>x>>index;
-                arr1->Insert(index,x);
-                break;
-            case 2: cout<<"Enter index ";
-                cin>>index;
-                x=arr1->Delete(index);
-                cout<<"Deleted Element is"<<x;
-                break;
-            case 3:cout<<"Enter element to search ";
-                cin>>x;
-                index=arr1->LinearSearch(x);
-                cout<<"Element index "<<index;
-                break;
-            case 4:cout<<"Sum is "<<arr1->Sum();
-                break;
-            case 5:arr1->Display();
+            while(dif < A[i]-i)
+            {
+                std::cout << dif+i << " ";
+                dif++;
+            }
         }
-    }while(ch<6);
-    return 0;
+    }
+    
+
 }
