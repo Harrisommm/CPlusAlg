@@ -403,6 +403,11 @@ Sorted(A,n)
     return true;
 }
 
+STRING 
+//init
+char x[5]={'A', 'B'}
+char x[]={'A', 'B'}
+char x[5]={65, 66}
 
-MERGING ARRAY //only in sorted array
-
+string terminator
+\0
