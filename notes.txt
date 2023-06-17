@@ -412,4 +412,8 @@ char x[5]={65, 66}
 string terminator
 \0
 
+MATRIX 
+
+DIAGONAL MATRIX
+M[i,j]=0 if i!=j
 
