@@ -412,3 +412,4 @@ char x[5]={65, 66}
 string terminator
 \0
 
+
