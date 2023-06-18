@@ -59,69 +59,82 @@ void Diagonal::Display()
     }
 }
 
-
-class LowerTry
+class LowerTri
 {
 private:
     int *A;
     int n;
-
 public:
-    LowerTry()
+    LowerTri()
     {
-        n=2;
-        A=new int[2*(2+1)/2];
+        n = 2;
+        A = new int[2*(2+1)/2];
     }
 
-    LowerTry(int n)
+    LowerTri(int n)
     {
         this->n = n;
         A = new int[n*(n+1)/2];
     }
 
-    ~LowerTry()
+    ~LowerTri()
     {
-        delete []A;
+        delete[] A;
     }
 
     void Set(int i, int j, int x);
     int Get(int i, int j);
     void Display();
-    int GetDimension(){return n;}
-
+    int GetDimension() { return n; }
 };
 
-
-void LowerTry::Set(int i, int j, int x)
+void LowerTri::Set(int i, int j, int x)
 {
-    if(i>=j)
-        A[i*(i-1)/2+j-1]=x;
+    if (i >= j)
+        A[i*(i+1)/2+j] = x;
 }
 
-int LowerTry::Get(int i, int j)
+int LowerTri::Get(int i, int j)
 {
-    if(i>=j)
-        return A[i*(i-1)/2+j-1];
+    if (i >= j)
+        return A[i*(i+1)/2+j];
     return 0;
 }
 
-void LowerTry::Display()
+void LowerTri::Display()
 {
-    for(int i=0; i<n; i++)
+    for (int i = 1; i <= n; i++)
     {
-        for(int j=0; j<n; j++)
+        for (int j = 1; j <= n; j++)
         {
-            if(i>=j)
-                std::cout<<A[i*(i-1)/2+j-1] << " ";
-            else    
-                std::cout<< "0 ";
+            if (i >= j)
+                std::cout << A[i*(i+1)/2+j] << " ";
+            else
+                std::cout << "0 ";
         }
-        std::cout<<std::endl;
+        std::cout << std::endl;
     }
 }
 
 int main()
 {
+    int dimen;
+    std::cout << "Enter Dimensions: ";
+    std::cin >> dimen;
+    LowerTri lm(dimen);
+
+    int x;
+    std::cout << "Enter All Elements: ";
+    for (int i = 1; i <= dimen; i++)
+    {
+        for (int j = 1; j <= dimen; j++)
+        {
+            std::cin >> x;
+            lm.Set(i, j, x);
+        }
+    }
+    lm.Display();
+
     // Diagonal d(4);
     // d.Set(1,1,5);
     // d.Set(2,2,8);
@@ -129,23 +142,6 @@ int main()
     // d.Set(4,4,5);
 
     // d.Display();
-
-    int dimen;
-    std::cout<<"Enter Dimensions ";
-    std::cin>>dimen;
-    LowerTry lm(dimen);
-
-    int x;
-    std::cout<<"Enter All Elements ";
-    for(int i=1; i<=dimen; i++)
-    {
-        for(int j=1; j<=dimen; j++)
-        {
-            std::cin>>x;
-            lm.Set(i,j,x);
-        }
-    }
-    lm.Display();
 
     return 0;
 }
