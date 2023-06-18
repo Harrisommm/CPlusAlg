@@ -417,3 +417,15 @@ MATRIX
 DIAGONAL MATRIX
 M[i,j]=0 if i!=j
 
+LOWER TRIANGULAR MATRIX
+M[i,j] = 0 if i<j
+M[i,j] !=0 if i>=j
+non-zero = n(n+1)/2
+
+row-major-mapping 
+index(A[i][j]) = i(i-1)/2+(j-1)
+
+column-major-mapping
+index(A[i][j]) = [n(j-1)-(1+2+,,,j-2)]+(i-j)
+
+
