@@ -428,4 +428,6 @@ index(A[i][j]) = i(i-1)/2+(j-1)
 column-major-mapping
 index(A[i][j]) = [n(j-1)-(1+2+,,,j-2)]+(i-j)
 
+SYMMETRIC MATRIX
+
 
